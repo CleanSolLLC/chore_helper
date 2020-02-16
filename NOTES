@@ -1,0 +1,59 @@
+Chore Helper Management System
+
+Models
+	User
+		Jim 
+		Sue
+		Max
+		Sandra
+
+	Chore
+		Cleaning
+		Grocery Shopping
+		Laundry
+		Pet Care
+	
+	Task
+		Cleaning 
+			Remove Trash
+			Clean Kitchen
+			Clean Bathroom 1
+			Clean Bathroom 1
+			Clean Bedroom 1
+			Clean Bedroom 2
+			Clean Bedroom 3
+			Clean Living Room 
+
+		Grocery Shopping
+			Apples
+			Eggs
+			Milk Bread
+			Chicken
+			Fish
+			Pet Food
+
+		Laundry
+			Separate Whites From Colors
+			Wash clothes
+			Dry Clothes
+			Fold and Put Away Clothes
+
+		Pet Care
+			Walk Fido
+			Change Slim Jim's litter box
+
+Relationships
+
+	A User has many Chores
+	A User has many Tasks through Chores 
+	A Chore belongs to a User
+	A Chore has many tasks
+	A Task belongs to a chore 
+	A Task belongs to a User through Chores
+
+
+
+
+
+
+
