@@ -76,3 +76,7 @@ Models
 			change Slim Jim's litter box
 			]
 		}
+
+		User_Task => join table
+			belongs_to :user
+			belongs_to :task
