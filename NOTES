@@ -77,6 +77,6 @@ Models
 			]
 		}
 
-		User_Task => join table
+		user_tasks => join table
 			belongs_to :user
 			belongs_to :task
