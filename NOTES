@@ -5,9 +5,9 @@ Models
 		has_many :chores
 		has_many :tasks, through: :chores
 
-		:name => "Jim"
-		:name => "Sue"
-		:name => "Max"
+		:user_name => "Jim"
+		:user_name => "Sue"
+		:user_name => "Max"
 
 		:email => "jim@foo.com"
 		:email => "sue@bar.c0m"
@@ -17,20 +17,31 @@ Models
 		:pasword_digest => "Sue456def"
 		:pasword_digest => "Max789ghi"
 
+		:avatar => avatar of user 
+
 
 	Chore
 		belongs_to :user
 		belongs_to :task
 		has_many :tasks
 
-		:name => "cleaning"
-		:name => "grocery shopping"
-		:name => "laundry"
+		:type => "cleaning"
+		:type => "grocery shopping"
+		:type => "laundry"
+
+		:user_id => integer
+		:task_id => integer
 
 
 	Task
 		belongs_to :chore
 		has_many :users, through: chores
+
+		:completed => boolean
+		:date_completed =>datetime
+		:task_name
+
+		Example
 		:cleaning{ 
 			[remove trash,
 			clean kitchen,
