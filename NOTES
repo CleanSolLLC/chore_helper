@@ -2,58 +2,66 @@ Chore Helper Management System
 
 Models
 	User
-		Jim 
-		Sue
-		Max
-		Sandra
+		has_many :chores
+		has_many :tasks, through: :chores
+
+		:name => "Jim"
+		:name => "Sue"
+		:name => "Max"
+
+		:email => "jim@foo.com"
+		:email => "sue@bar.c0m"
+		:email => "Maxgh@foobar.com"
+
+		:pasword_digest => "Jim123abc"
+		:pasword_digest => "Sue456def"
+		:pasword_digest => "Max789ghi"
+
 
 	Chore
-		Cleaning
-		Grocery Shopping
-		Laundry
-		Pet Care
-	
+		belongs_to :user
+		belongs_to :task
+		has_many :tasks
+
+		:name => "cleaning"
+		:name => "grocery shopping"
+		:name => "laundry"
+
+
 	Task
-		Cleaning 
-			Remove Trash
-			Clean Kitchen
-			Clean Bathroom 1
-			Clean Bathroom 1
-			Clean Bedroom 1
-			Clean Bedroom 2
-			Clean Bedroom 3
-			Clean Living Room 
+		belongs_to :chore
+		has_many :users, through: chores
+		:cleaning{ 
+			[remove trash,
+			clean kitchen,
+			clean bathroom 1,
+			clean bathroom 2,
+			clean bedroom 1,
+			Clean bedroom 2,
+			]
+		}
 
-		Grocery Shopping
-			Apples
-			Eggs
-			Milk Bread
-			Chicken
-			Fish
-			Pet Food
+		:grocery shopping{
+			[apples,
+			eggs,
+			milk,
+			bread,
+			chicken,
+			fish,
+			pet food
+			]
+		}
 
-		Laundry
-			Separate Whites From Colors
-			Wash clothes
-			Dry Clothes
-			Fold and Put Away Clothes
+		:laundry{
+			[separate whites From colors,
+			wash clothes,
+			dry clothes,
+			fold and put away clothes
+			]
+		}
 
-		Pet Care
-			Walk Fido
-			Change Slim Jim's litter box
-
-Relationships
-
-	A User has many Chores
-	A User has many Tasks through Chores 
-	A Chore belongs to a User
-	A Chore has many tasks
-	A Task belongs to a chore 
-	A Task belongs to a User through Chores
-
-
-
-
-
-
-
+		:pet care{
+			[walk Fido,
+			change Slim Jim's litter box
+			]
+		}
