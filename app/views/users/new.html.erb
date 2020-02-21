@@ -1,0 +1,12 @@
+<h1>Welcome to the sign up page!</h1>
+
+<%= form_for @user do |user_profile| %>
+  <%= user_profile.label :user_name %><br>
+  <%= user_profile.text_field :user_name %><br><br>
+  <%= user_profile.label :email %><br>
+  <%= user_profile.text_field :email %><br><br>
+
+    <%= user_profile.label :password_digest %><br>
+  <%= user_profile.text_field :password_digest %><br><br>
+  <%= user_profile.submit %>
+<% end %>
