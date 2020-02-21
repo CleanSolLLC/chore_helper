@@ -21,16 +21,11 @@ Models
 
 
 	Chore
-		belongs_to :user
-		belongs_to :task
 		has_many :tasks
 
-		:type => "cleaning"
-		:type => "grocery shopping"
-		:type => "laundry"
-
-		:user_id => integer
-		:task_id => integer
+		:chore_type => "cleaning"
+		:chore_type => "grocery shopping"
+		:chore_type => "laundry"
 
 
 	Task

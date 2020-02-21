@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_20_201952) do
+ActiveRecord::Schema.define(version: 2020_02_21_000925) do
 
   create_table "chores", force: :cascade do |t|
-    t.string "type"
-    t.integer "user_id", null: false
-    t.integer "task_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["task_id"], name: "index_chores_on_task_id"
-    t.index ["user_id"], name: "index_chores_on_user_id"
+    t.string "chore_type"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -46,7 +40,5 @@ ActiveRecord::Schema.define(version: 2020_02_20_201952) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "chores", "tasks"
-  add_foreign_key "chores", "users"
   add_foreign_key "tasks", "chores"
 end
