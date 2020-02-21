@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_011747) do
+ActiveRecord::Schema.define(version: 2020_02_21_163530) do
 
   create_table "chores", force: :cascade do |t|
     t.string "chore_type"
@@ -25,11 +25,6 @@ ActiveRecord::Schema.define(version: 2020_02_21_011747) do
     t.integer "chore_id"
   end
 
-  create_table "user_tasks", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "task_id", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "email"
@@ -37,6 +32,13 @@ ActiveRecord::Schema.define(version: 2020_02_21_011747) do
     t.binary "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users_tasks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+    t.index ["task_id"], name: "index_users_tasks_on_task_id"
+    t.index ["user_id"], name: "index_users_tasks_on_user_id"
   end
 
 end

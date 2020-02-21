@@ -19,6 +19,9 @@ Models
 
 		:avatar => avatar of user 
 
+```````````````````````````````````````````````````````````````
+user = User.new(user_name: "Jim", email: "jim@foo.com" )
+```````````````````````````````````````````````````````````````
 
 	Chore
 		has_many :tasks
@@ -26,6 +29,10 @@ Models
 		:chore_type => "cleaning"
 		:chore_type => "grocery shopping"
 		:chore_type => "laundry"
+
+```````````````````````````````````````````````````````````````
+chore = Chore.new(chore_type: "cleaning")
+```````````````````````````````````````````````````````````````
 
 
 	Task
@@ -71,6 +78,11 @@ Models
 			change Slim Jim's litter box
 			]
 		}
+
+```````````````````````````````````````````````````````````````
+new_task = chore.tasks.build(task_name: "food")
+``````````````````````````````````````````````````````````````
+
 
 		user_tasks => join table
 			belongs_to :user
