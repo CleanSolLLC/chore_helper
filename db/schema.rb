@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_000925) do
+ActiveRecord::Schema.define(version: 2020_02_21_011747) do
 
   create_table "chores", force: :cascade do |t|
     t.string "chore_type"
@@ -20,10 +20,9 @@ ActiveRecord::Schema.define(version: 2020_02_21_000925) do
     t.boolean "completed"
     t.datetime "date_completed"
     t.string "task_name"
-    t.integer "chore_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["chore_id"], name: "index_tasks_on_chore_id"
+    t.integer "chore_id"
   end
 
   create_table "user_tasks", id: false, force: :cascade do |t|
@@ -40,5 +39,4 @@ ActiveRecord::Schema.define(version: 2020_02_21_000925) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "tasks", "chores"
 end
