@@ -3,15 +3,23 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
     @user = User.new
   end
 
-  def create
-    raise params.inspect
-    @user = User.new(user_params)
+  def create 
+    @user = User.new
+    @user.email = params[:user][:email]
+    
+    if @user.save
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
+
   end
 
   def edit
@@ -22,4 +30,11 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  private 
+
+    # def user_params
+    #   params.require(:user).permit(:email)
+    # end
+
 end

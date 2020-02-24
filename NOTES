@@ -87,3 +87,20 @@ new_task = chore.tasks.build(task_name: "food")
 		user_tasks => join table
 			belongs_to :user
 			belongs_to :task
+
+
+2. models works in console. Take a break from modeling and incorporate some front end development to enhance user experience. Used Bulma template and modified. Will customize for each url
+
+3. Error handling 
+
+How to handle error handling and where to put css files!!!!!
+
+Rails form helpers guide
+
+<%= f. field_text :name :class => "new-chore", :placeholder => (@list.error_messages_for(:name).first || :Enter New Chore) %>
+
+div.field_wth_errors input[type="text"]{
+	border: 1px solid red;
+}
+
+
