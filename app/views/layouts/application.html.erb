@@ -11,27 +11,21 @@
   </head>
 
 
-
   <body>
-
-           <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
        
   	        <section class="hero is-info is-medium is-bold">
             <div class="hero-head">
                 <nav class="navbar">
                     <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="../">
-                                <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
-                            </a>
-                            <span class="navbar-burger burger" data-target="navbarMenu">
+                        <span title="Welcome to your chores helper"><h1>View Source</h1></span>
+                        
+                            <div class="navbar-brand">
+ 
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                            </span>
-                        </div>
+                                </span>
+                            </div>
                         <div id="navbarMenu" class="navbar-menu">
                             <div class="navbar-end">
                                 <div class="tabs is-right">
@@ -42,12 +36,8 @@
                                         <li><a href="">Team</a></li>
                                         <li><a href="">Help</a></li>
                                     </ul>
-                                    <span class="navbar-item">
-                                        <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html">
-                                            <span class="icon">
-                                                <i class="fa fa-github"></i>
-                                            </span>
-                                            <span title="Hello from the other side">View Source</span>
+
+                                            
                                         </a>
                                     </span>
                                 </div>
@@ -56,6 +46,38 @@
                     </div>
                 </nav>
             </div><br><br>
+
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical">
+
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-white">
+
+                <ul class="hmenu">
+                    <%= render 'devise/menu/registration_items' %>
+                    <%= render 'devise/menu/login_items' %>
+                </ul>
     <%= yield %>
-  </body>
+
+                                                                    </article>
+                                                                </div>
+                                                            </div>
+
+                                                                </article>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                    <div class="tile is-parent is-shady">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
 </html>

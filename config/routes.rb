@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  #root to 'home#index'
+  
+  root 'site#index' #take user to their index page
   resources :users, :chores, :tasks
 end
