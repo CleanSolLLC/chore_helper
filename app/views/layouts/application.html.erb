@@ -15,9 +15,9 @@
        
   	        <section class="hero is-info is-medium is-bold">
             <div class="hero-head">
+                <h1>Chore Helper Management System</h1>
                 <nav class="navbar">
                     <div class="container">
-                        <span title="Welcome to your chores helper"><h1>View Source</h1></span>
                         
                             <div class="navbar-brand">
  
@@ -56,11 +56,13 @@
                             <div class="tile is-parent">
                                 <article class="tile is-child notification is-white">
 
-                <ul class="hmenu">
+
+    <%= yield %>
+
+                    <ul class="hmenu">
                     <%= render 'devise/menu/registration_items' %>
                     <%= render 'devise/menu/login_items' %>
                 </ul>
-    <%= yield %>
 
                                                                     </article>
                                                                 </div>
