@@ -6,7 +6,7 @@ class User < ApplicationRecord
 	has_many :chores
 	has_many :tasks, through: :users_tasks
 
-	#validates :email, presence: true 
-	validates :email, uniqueness: true  
+	validates :username, presence: true 
+	#validates :email, uniqueness: true  
 end
  
