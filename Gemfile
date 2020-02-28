@@ -45,3 +45,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.7"
 
 gem "omniauth-facebook", "~> 6.0"
+
+gem "dotenv-rails", "~> 2.7"
+
+gem "omniauth-google-oauth2", "~> 0.8.0"

@@ -59,10 +59,14 @@
 
     <%= yield %>
 
-                    <ul class="hmenu">
-                    <%= render 'devise/menu/registration_items' %>
-                    <%= render 'devise/menu/login_items' %>
-                </ul>
+ <%= current_user.email if user_signed_in? %>
+
+
+    <%= link_to :Logout, destroy_user_session_path, method: :delete %>
+
+     
+</div>
+
 
                                                                     </article>
                                                                 </div>
@@ -80,6 +84,8 @@
                 </div>
             </div>
         </section>
+
+        
 
     </body>
 </html>

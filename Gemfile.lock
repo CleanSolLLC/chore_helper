@@ -73,6 +73,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
@@ -119,6 +123,10 @@ GEM
       rack (>= 1.6.2, < 3)
     omniauth-facebook (6.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-google-oauth2 (0.8.0)
+      jwt (>= 2.0)
+      omniauth (>= 1.1.1)
+      omniauth-oauth2 (>= 1.6)
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
@@ -214,9 +222,11 @@ DEPENDENCIES
   bulma-rails (~> 0.8.0)
   byebug
   devise (~> 4.7)
+  dotenv-rails (~> 2.7)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   omniauth-facebook (~> 6.0)
+  omniauth-google-oauth2 (~> 0.8.0)
   pry
   pry-nav
   puma (~> 4.1)
