@@ -1,4 +1,7 @@
 class SiteController < ApplicationController
-  def index
+  def welcome
+  end
+
+  def logout
   end
 end

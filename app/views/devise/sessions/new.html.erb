@@ -1,7 +1,7 @@
 <h1><b>Log in</b></h1><br>
   
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
 
   <br>
 
@@ -29,6 +29,7 @@
 <% end %>
 
   <%= render 'devise/shared/links' %>
+  <%= link_to :Logout, destroy_user_session_path, method: :delete %>
 
     </body>
 </html>
