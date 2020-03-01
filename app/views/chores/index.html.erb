@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>User's List of Chores!</title>
 
   </head>
   <body>
 
   <section class="tile">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
+        <h2><strong><%= current_user.username %> here are a list of your chores!</strong></h2><br>
+        <% @chores.each do |chore| %>
+        <ul>
+          <li><%= chore.chore_type %></li>
+          <% end %>
+        </ul>  
+  
       <p class="subtitle">
         My first website with <strong>Bulma</strong>!
       </p>

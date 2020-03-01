@@ -1,6 +1,12 @@
 
 <% if user_signed_in? %>
 	<h2><b>Welcome <%= current_user.username %></b></h2>
+	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
+
+	<p> Last log in at: <%= current_user.last_sign_in_at.strftime('%A %B %G %r') %></p>
+
+	<p><%= link_to('See your chores', chores_path) %></p>
+
 	<%= link_to :Logout, destroy_user_session_path, method: :delete %>
 
 <% else %>
