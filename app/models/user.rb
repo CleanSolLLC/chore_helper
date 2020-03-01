@@ -6,8 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook]
          
 	has_many :chores
-	#has_many :tasks, through: :chores
-  #has to be a chore_id on user_task 
+	has_many :tasks, through: :chores
 
 	validates :username, presence: true 
 	#validates :email, uniqueness: true  

@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_01_022056) do
+ActiveRecord::Schema.define(version: 2020_03_01_041733) do
 
   create_table "chores", force: :cascade do |t|
     t.string "chore_type"
     t.integer "user_id"
+    t.integer "task_id"
+    t.index ["task_id"], name: "index_chores_on_task_id"
     t.index ["user_id"], name: "index_chores_on_user_id"
   end
 
