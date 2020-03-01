@@ -10,16 +10,25 @@
 
   <section class="tile">
     <div class="container">
-        <h2><strong><%= current_user.username %> here are a list of your chores!</strong></h2><br>
+
+      
+      <% if current_user.chores.empty? %>
+         <h3><strong><%= current_user.username %> You have no chores<br> 
+          <%= link_to('please enter a chore', new_chore_path) %></strong></h3><br>
+
+      <% else %> 
+  
+        <h3><strong><%= current_user.username %> here are a list of your chores</strong></h3><br>
         <% @chores.each do |chore| %>
         <ul>
           <li><%= chore.chore_type %></li>
           <% end %>
-        </ul>  
+        </ul> 
+
+        <% end %> 
+
+        <%= link_to :Logout, destroy_user_session_path, method: :delete %>
   
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
     </div>
   </section>
   </body>

@@ -1,6 +1,6 @@
 
 <% if user_signed_in? %>
-	<h2><b>Welcome <%= current_user.username %></b></h2>
+	<h3><b>Welcome <%= current_user.username %></b></h3>
 	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
 
 	<p> Last log in at: <%= current_user.last_sign_in_at.strftime('%A %B %G %r') %></p>
