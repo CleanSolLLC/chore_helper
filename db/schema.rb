@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_103157) do
+ActiveRecord::Schema.define(version: 2020_03_01_022056) do
 
   create_table "chores", force: :cascade do |t|
     t.string "chore_type"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_chores_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -23,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_103157) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "chore_id"
+    t.index ["chore_id"], name: "index_tasks_on_chore_id"
   end
 
   create_table "users", force: :cascade do |t|
