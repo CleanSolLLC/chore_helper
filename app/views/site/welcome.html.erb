@@ -1,9 +1,9 @@
 
 <% if user_signed_in? %>
 	<h3><b>Welcome <%= current_user.username %></b></h3>
-	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
+	<p> Logged in on: <%= user_login_time %></p>
 
-	<p> Last log in at: <%= current_user.last_sign_in_at.strftime('%A %B %G %r') %></p>
+	<p> Last log in on: <%= user_last_login_time(current_user)%></p>
 
 	<p><%= link_to('See your chores', chores_path) %></p>
 
