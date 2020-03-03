@@ -1,7 +1,12 @@
 
 <% if user_signed_in? %>
+<<<<<<< HEAD
 	<h3><b>Welcome <%= current_user.username %></b></h3>
 	<p> Logged in on: <%= user_login_time %></p>
+=======
+	<h2><b>Welcome <%= current_user.username %></b></h2>
+	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
+>>>>>>> parent of 9602553... added logic in chores view to address if user does not have chores
 
 	<p> Last log in on: <%= user_last_login_time(current_user)%></p>
 
