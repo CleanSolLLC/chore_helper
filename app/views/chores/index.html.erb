@@ -3,55 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User's List of Chores!</title>
+    <title>Hello Bulma!</title>
 
   </head>
   <body>
 
   <section class="tile">
     <div class="container">
-<<<<<<< HEAD
 
-
-      <% if current_user.chores.empty? %>
-         <h3><strong><%= current_user.username %> You have no chores<br><br></strong></h3>
-          <div class = "link-to-text-color">
-          <%= link_to('please enter a chore', new_chore_path, class: "link-to-text-color" ) %><br>
-        </div>
-
-
-      <% else %> 
-  
-        <h3><strong><%= current_user.username %> here is a list of your chores</strong></h3><br>
-        <% @chores.each do |chore| %>
-        <ul>
-          <li><%= chore.chore_type %></li>
-            <% if chore.tasks.any? %>
-            
-            <div class= "tasks" >
-              <ul>
-                <% chore.tasks.each do |task| %>
-                  <li><%= task.task_name %></li>
-              </ul>
-              <% end %>
-            
-
-            <% end %> 
-          <% end %>
-          </div>
-          <% end %>
-          
-
-        <%= link_to :Logout, destroy_user_session_path, method: :delete %>
-=======
-        <h2><strong><%= current_user.username %> here are a list of your chores!</strong></h2><br>
-        <% @chores.each do |chore| %>
-        <ul>
-          <li><%= chore.chore_type %></li>
-          <% end %>
-        </ul>  
->>>>>>> parent of 9602553... added logic in chores view to address if user does not have chores
-  
       <p class="subtitle">
         My first website with <strong>Bulma</strong>!
       </p>

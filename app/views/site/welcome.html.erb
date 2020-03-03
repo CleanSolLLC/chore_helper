@@ -5,6 +5,7 @@
 	<p> Logged in on: <%= user_login_time %></p>
 =======
 	<h2><b>Welcome <%= current_user.username %></b></h2>
+<<<<<<< HEAD
 	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
 >>>>>>> parent of 9602553... added logic in chores view to address if user does not have chores
 
@@ -12,6 +13,8 @@
 
 	<p><%= link_to('See your chores', chores_path) %></p>
 
+=======
+>>>>>>> parent of f354b82... added index on chores controller and view
 	<%= link_to :Logout, destroy_user_session_path, method: :delete %>
 
 <% else %>
