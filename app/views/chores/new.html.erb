@@ -1,2 +1,15 @@
-<h1>Chores#new</h1>
-<p>Find me in app/views/chores/new.html.erb</p>
+<h2><strong><%= current_user.username %>, enter a new chore</strong></h2>
+
+<fieldset>
+
+	<legend>Your Chores!</legend>
+	<%= form_for @chore do |f| %>
+	<%= f.label "Chore" %><br>
+	<%= f.text_field :chore_type %><br><br>
+</fieldset>
+
+<%= f.submit %>
+<% end %>
+
+
+

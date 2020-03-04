@@ -2,17 +2,10 @@
 <% if user_signed_in? %>
 	<h3><b>Welcome <%= current_user.username %></b></h3>
 
-	<%byebug%>
-
 	<p> Logged in on: <%= user_login_time %></p>
-	<h2><b>Welcome <%= current_user.username %></b></h2>
+	<p> Last log in on: <%= user_last_login_time(current_user)%></p><br>
 
-	<p> Logged in at: <%= current_user.current_sign_in_at.strftime('%A %B %G %r') %></p>
-
-
-	<p> Last log in on: <%= user_last_login_time(current_user)%></p>
-
-	<p><%= link_to('See your chores', chores_path) %></p>
+	<p><%= link_to('See your chores', chores_path) %></p><br>
 
 
 	<%= link_to :Logout, destroy_user_session_path, method: :delete %>
@@ -24,7 +17,6 @@
   	  <ul>
 		  <li><%= link_to('Sign In', new_user_session_path) %></li>
 		  <li><%= link_to('Register', new_user_registration_path) %></li>
-		  <li><%= link_to :Logout, destroy_user_session_path, method: :delete %></li>
 	  </ul>
 
 <% end %>
